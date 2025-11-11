@@ -1,0 +1,17 @@
+sites/*/files
+sites/*/private
+cache/
+files/   
+
+/CHANGELOG.txt
+/COPYRIGHT.txt
+/LICENSE.txt
+/README.txt
+/INSTALL*.txt
+/UPGRADE.txt
+sites/all/README.txt
+sites/all/modules/README.txt
+sites/all/themes/README.txt   
+
+.env
+.env.local
