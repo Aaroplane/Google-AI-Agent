@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args: ['--maxkb=512']
+  # Use a local detect-secrets wrapper instead of relying on the remote hook id,
+  # which can change between releases. The local script will call the
+  # detect-secrets CLI (installed in the project's venv) and fail commits if
+  # new secrets are detected.
+  - repo: local
+    hooks:
+      - id: detect-secrets-local
+        name: Run detect-secrets (local)
+        entry: scripts/run-detect-secrets.sh
+        language: script
+        types: [file]
+  - repo: local
+    hooks:
+      - id: block-env
+        name: Block .env and sensitive file patterns
+        entry: scripts/prevent-commit-secrets.sh
+        language: script
+        types: [file]
