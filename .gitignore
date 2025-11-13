@@ -91,7 +91,7 @@ yarn-error.log
 sites/*/files
 sites/*/private
 cache/
-files/   
+files/
 
 /CHANGELOG.txt
 /COPYRIGHT.txt

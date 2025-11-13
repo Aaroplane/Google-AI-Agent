@@ -31,4 +31,3 @@ python API_test.py
 - ⚠️ **Keep API keys private** — rotate them if exposed
 - ⚠️ **Use `.env.example`** to document required variables
 - ⚠️ **Enable API rate limiting** in Google Cloud Console to prevent abuse
-
